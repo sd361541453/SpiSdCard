@@ -335,7 +335,7 @@ http://elm-chan.org/fsw/ff/00index_e.html
 diskio.c：主要是读写要实现自己的spi sd卡 section的读写。
 ffconf.h：主要是改一些配置，按自己需求也行。
 
-###1.diskio.c  disk_status/disk_initialize/disk_ioctl 3个函数内容全部删除，改成return 0;
+### 1.diskio.c  disk_status/disk_initialize/disk_ioctl 3个函数内容全部删除，改成return 0;
 disk_ioctl 需要实现一些命令响应(剩余容量之类的)，暂时不做了。
 ```c
 DSTATUS disk_status (
@@ -345,14 +345,14 @@ DSTATUS disk_status (
 }
 ...
 ```
-###2.diskio.c 添加时间函数:
+### 2.diskio.c 添加时间函数:
 ```c
 DWORD get_fattime(void){
 	return 0;
 }
 ```
 
-###3.diskio.c 修改读写函数:
+### 3.diskio.c 修改读写函数:
 ```c
 DRESULT disk_read (
 	BYTE pdrv,		/* Physical drive nmuber to identify the drive */
@@ -411,7 +411,7 @@ DRESULT disk_write (
 ```
 
 ## 9.FatFs 使用
-
+主要是文件列表，TXT文件读写。
 ```c
 /******************** LS **********************/
 char sizeString[10];
