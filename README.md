@@ -564,7 +564,7 @@ void fileOp(){
 }
 ```
 
-![1](./pic/Write2.png)
+![1](./pic/COM.png)
 
 ## 10.Section/Block
 512 bytes , 可以认为是一样的东西。
