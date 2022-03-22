@@ -575,11 +575,11 @@ void fileOp(){
 
 
 ## 11.参考资料：
-register：[http://xxxdk.xyz/xxx/2020/10/SD卡相关寄存器简介/](http://xxxdk.xyz/xxx/2020/10/SD%E5%8D%A1%E7%9B%B8%E5%85%B3%E5%AF%84%E5%AD%98%E5%99%A8%E7%AE%80%E4%BB%8B/)
-cmd：[http://xxxdk.xyz/xxx/2021/01/SD卡命令简介/](http://xxxdk.xyz/xxx/2021/01/SD%E5%8D%A1%E5%91%BD%E4%BB%A4%E7%AE%80%E4%BB%8B/)
-fat：[https://www.kancloud.cn/digest/stm32-peripheral/168569](https://www.kancloud.cn/digest/stm32-peripheral/168569)
-fat：[http://elm-chan.org/fsw/ff/00index_e.html](http://elm-chan.org/fsw/ff/00index_e.html)
-init：[http://xxxdk.xyz/xxx/2021/03/SD卡识别流程简介/](http://xxxdk.xyz/xxx/2021/03/SD%E5%8D%A1%E8%AF%86%E5%88%AB%E6%B5%81%E7%A8%8B%E7%AE%80%E4%BB%8B/)
-hardware/CMD：[http://chlazza.nfshost.com/sdcardinfo.html](http://chlazza.nfshost.com/sdcardinfo.html)
-code : [https://zhuanlan.zhihu.com/p/37691455](https://zhuanlan.zhihu.com/p/37691455)
+register：[http://xxxdk.xyz/xxx/2020/10/SD卡相关寄存器简介/](http://xxxdk.xyz/xxx/2020/10/SD%E5%8D%A1%E7%9B%B8%E5%85%B3%E5%AF%84%E5%AD%98%E5%99%A8%E7%AE%80%E4%BB%8B/)  
+cmd：[http://xxxdk.xyz/xxx/2021/01/SD卡命令简介/](http://xxxdk.xyz/xxx/2021/01/SD%E5%8D%A1%E5%91%BD%E4%BB%A4%E7%AE%80%E4%BB%8B/)  
+fat：[https://www.kancloud.cn/digest/stm32-peripheral/168569](https://www.kancloud.cn/digest/stm32-peripheral/168569)  
+fat：[http://elm-chan.org/fsw/ff/00index_e.html](http://elm-chan.org/fsw/ff/00index_e.html)  
+init：[http://xxxdk.xyz/xxx/2021/03/SD卡识别流程简介/](http://xxxdk.xyz/xxx/2021/03/SD%E5%8D%A1%E8%AF%86%E5%88%AB%E6%B5%81%E7%A8%8B%E7%AE%80%E4%BB%8B/)  
+hardware/CMD：[http://chlazza.nfshost.com/sdcardinfo.html](http://chlazza.nfshost.com/sdcardinfo.html)  
+code : [https://zhuanlan.zhihu.com/p/37691455](https://zhuanlan.zhihu.com/p/37691455)  
 
