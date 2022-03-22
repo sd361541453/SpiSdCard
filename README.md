@@ -4,22 +4,22 @@
 
 ## 1.种类
 卡有几种，通过外表是分不出来是哪一种的，通过容量也只能大概分出来。
-1.V1
-2.V2SC
-3.V2HC
-4.SDXC 
-5.SDUC
+1.V1  
+2.V2SC  
+3.V2HC  
+4.SDXC  
+5.SDUC  
 
-他们各个的协议是不相同的，初始化的时候可以识别V1/V2SC/V2HC。
-这里的代码不支持SDXC和SDUC，不知道是否支持SPI，直接使用的话，容量和返回值也不正确。
-8G以上的卡，基本不能用。
-8G的卡，有些能用。
-8G以下的卡，基本都能用。
+他们各个的协议是不相同的，初始化的时候可以识别V1/V2SC/V2HC。  
+这里的代码不支持SDXC和SDUC，不知道是否支持SPI，直接使用的话，容量和返回值也不正确。  
+8G以上的卡，基本不能用。  
+8G的卡，有些能用。  
+8G以下的卡，基本都能用。  
 
-![1](./pic/card.png)
+![card](./pic/card.png)
 
 ## 2.结构
-![1](./pic/code.png)
+![code](./pic/code.png)
 
 
 
@@ -32,29 +32,29 @@
 CMD0 (hex) : 40 00 00 00 00 95
 CMD55 (hex): 77 00 00 00 00 00
 ```
-![1](./pic/cmdFormat.png)
+![cmdFormat](./pic/cmdFormat.png)
 
-ACMD ：相当于二级命令，凡是ACMD前面先发CMD55，先发CMD55进入二级命令，再发CMD41，连起来用就行了。
-例如：ACMD41 = CMD55 + CMD41. 
+ACMD ：相当于二级命令，凡是ACMD前面先发CMD55，先发CMD55进入二级命令，再发CMD41，连起来用就行了。  
+例如：ACMD41 = CMD55 + CMD41.   
 
-主要命令：CMD0, CMD8, (CMD55, ACMD41), CMD58, CMD9.
+主要命令：CMD0, CMD8, (CMD55, ACMD41), CMD58, CMD9.  
 
 ### 响应:
-命令响应类型有：R1,R1b,R2,R3,R7。
-每种命令都有对应的响应解析,而且数据长度不一样。
-基本了解R1即可。
-命令的type无视即可。
-![1](./pic/cmdList.png)
+命令响应类型有：R1,R1b,R2,R3,R7。    
+每种命令都有对应的响应解析,而且数据长度不一样。    
+基本了解R1即可。    
+命令的type无视即可。    
+![cmdList](./pic/cmdList.png)
 <!-- ![1](./pic/R1.png) -->
-![1](./pic/R1-2.png)
+![R1](./pic/R1-2.png)
 
 ### 基本操作
-如图先发 6 bytes CMD55，然后一直发0XFF等待回复，一般发到第二个0xFF就会收到回复。
-前后的 0XFF 多余的，可以不发。
+如图先发 6 bytes CMD55，然后一直发0XFF等待回复，一般发到第二个0xFF就会收到回复。    
+前后的 0XFF 多余的，可以不发。  
 
-![1](./pic/CMD55R1.png)
-CMD55 = 0X37 | 0x40 = 55 | 0x40
-response=0x01: 0x01 不是代表 R1，而是这个response要参考 R1 的解释。 （0x01=没有错误，且目前是In idle state）
+![Cmd55R1](./pic/Cmd55R1.png)
+CMD55 = 0X37 | 0x40 = 55 | 0x40    
+response=0x01: 0x01 不是代表 R1，而是这个response要参考 R1 的解释。 （0x01=没有错误，且目前是In idle state）   
 
 CMD0: 
 ``` 
@@ -74,7 +74,7 @@ MISO:                     FF 01 00 00 01 AA
 SPI有6个寄存器，主要是CSD需要看一下，其他无视即可，CSD通过CMD9获取，可以计算卡的容量，CSD的含义有V1 V2 V3版本。 各版本计算容量的方式都不一样。V3版本的卡读取错误(可能是不支持SPI模式).
 ## 5.Hardware
 ## 6.Init
-![1](./pic/Flow.png)
+![Flow](./pic/flow.png)
 建议下载逻辑分析记录看看。
 ```c
 uint8_t spiSdInit(){
@@ -179,8 +179,8 @@ uint8_t spiSdInit(){
 
 ## 7.Read/Write
 ###Read:
-![1](./pic/Read1.png)
-![1](./pic/Read2.png)
+![Read1](./pic/Read1.png)
+![Read2](./pic/Read2.png)
 ```c
 
 /**
