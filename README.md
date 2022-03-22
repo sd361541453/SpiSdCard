@@ -3,7 +3,7 @@
 统一整理下 Spi sdcard 协议内容。
 
 ## 1.种类
-卡有几种，通过外表是分不出来是哪一种的，通过容量也只能大概分出来。
+卡有几种，通过外表是分不出来是哪一种的，通过容量也只能大概分出来。  
 1.V1  
 2.V2SC  
 3.V2HC  
@@ -178,7 +178,7 @@ uint8_t spiSdInit(){
 
 
 ## 7.Read/Write
-###Read:
+### Read:
 ![Read1](./pic/Read1.png)
 ![Read2](./pic/Read2.png)
 ```c
@@ -247,7 +247,7 @@ uint8_t spiSdReadSingleBlock(uint32_t sec, uint8_t *data) {
 }
 ```
 
-###Write:
+### Write:
 
 ![1](./pic/Write1.png)
 ![1](./pic/Write2.png)
@@ -393,7 +393,7 @@ DRESULT disk_write (
 
 ```
 
-###4.ffconf.h: 87
+### 4.ffconf.h: 87
 改成不支持多国语言，也不支持中文，减少容量消耗。
 要支持中文的改成936，容量会大100k以上。
 ```c
